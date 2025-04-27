@@ -13,10 +13,10 @@ header('Content-Type: text/html; charset=iso-8859-1');
 
 echo 'Versao Atual do PHP: ' . phpversion() . '<br>';
 
-$servername = "54.234.153.24";
-$username = "root";
-$password = "Senha123";
-$database = "meubanco";
+$servername = "mariadb-nfs-debian";
+$username = "myApp";
+$password = "MyPass123";
+$database = "toshiro_db";
 
 // Criar conexão
 
@@ -33,7 +33,7 @@ $valor_rand1 =  rand(1, 999);
 $valor_rand2 = strtoupper(substr(bin2hex(random_bytes(4)), 1));
 $host_name = gethostname();
 
-
+echo "Inserindo dados aleatórios no banco de dados. Atualize a página para inserir novos registros.";
 $query = "INSERT INTO dados (AlunoID, Nome, Sobrenome, Endereco, Cidade, Host) VALUES ('$valor_rand1' , '$valor_rand2', '$valor_rand2', '$valor_rand2', '$valor_rand2','$host_name')";
 
 

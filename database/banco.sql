@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS toshiro_db;
+
+USE toshiro_db;
+
 CREATE TABLE dados (
     AlunoID int,
     Nome varchar(50),
